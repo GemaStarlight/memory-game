@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(176, 107, 255);
+    font-family: 'Kavoon', cursive;
+}
+
+.cabecera {
+    margin: 25px 50px 0 50px;
+    padding: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecera.centrada {
+    justify-content: center;
+}
+
+button {
+    border: 4px solid blueviolet;
+    color: white;
+    font-size: 40px;
+    padding: 10px 20px;
+    background-color: indigo;
+    border-radius: 10px;
+    font-family: 'Kavoon', cursive;
+    z-index: 30;
+}
+
+#reloj {
+    color: indigo;
+    font-size: 40px;
+    width: 34%;
+    text-align: center;
+    display: none;
+}
+
+/* #reloj.fogonazo {
+    -webkit-animation: mymove 1s infinite;
+}
+
+@-webkit-keyframes mymove {
+    50% {font-size: 55px;}
+} */
+
+.rejilla {
+    margin: -1000px auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 1000ms ease-in-out;
+}
+
+.rejilla.start {
+    margin: 0 auto;
+}
+
+.rejilla.out {
+    margin: -1000px auto;
+}
+
+#game-over {
+    opacity: 0;
+    position: fixed;
+    font-size: 160px;
+    color: indigo;
+    text-shadow: 4px 4px rgb(223, 181, 255);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -5;
+    text-align: center;
+    transition: 2s all ease-in-out;
+}
+
+.tarjeta {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 400ms linear;
+}
+
+.anverso {
+    height: 150px;
+    width: 150px;
+    background-image: url("../img/LogoGemaStarlight.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.reverso {
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.seleccionado {
+    transform: rotateY(180deg);
+}
+
+.eliminado .anverso {
+    background-image: none !important;
+}
+
+#winner {
+    font-size: 160px;
+    color: indigo;
+    text-shadow: 4px 4px rgb(223, 181, 255);
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    transition: all 500ms ease-in-out;
+}
+
+#winner.open {
+    top: 50%;
+}
+
+/* .izquierda, .centro, .derecha {
+    width: 33%;
+} */
+
+#quedan, #llevas {
+    width: 33%;
+    text-align: center;
+    font-size: 22px;
+}
+
+#start {
+    /* width: 34%; */
+    text-align: center;
+}
