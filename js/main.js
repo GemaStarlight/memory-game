@@ -309,4 +309,4 @@ var contEliminados = function () {
 
 }
 
-song.play();
+// song.play();
